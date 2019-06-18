@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  get 'users/new'
   root to: 'basic_pages#home'
-  get 'basic_pages/home'
+  get '/home',  to: 'basic_pages#home'
   get '/about', to: 'basic_pages#about'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/signup', to: 'users#new'
 end
