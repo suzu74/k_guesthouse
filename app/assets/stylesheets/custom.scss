@@ -196,3 +196,14 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+.profile {
+	border-radius: 50%;
+}
+
+.top 
+{ background: url(room.jpg) no-repeat center center fixed;
+	min-height: 100vh; 
+	background-size: cover;
+	opacity: 0.8;
+}
