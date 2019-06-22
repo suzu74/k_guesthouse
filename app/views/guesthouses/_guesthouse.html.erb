@@ -1,8 +1,7 @@
 <li id="micropost-<%= guesthouse.id %>">
-  <span class="user"><%= link_to guesthouse.user.name, guesthouse.user %></span>
   <span class="content">
     <%= link_to guesthouse.name, guesthouse %>
-    <%= image_tag guesthouse.picture if guesthouse.picture.attached? %>
+    <%= image_tag guesthouse.picture.variant(resize: "350x300") if guesthouse.picture.attached? %>
     <%= guesthouse.content %>
   </span>
   <span class="timestamp">

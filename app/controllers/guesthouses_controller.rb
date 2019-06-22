@@ -1,7 +1,15 @@
 class GuesthousesController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
+  before_action :logged_in_user, only: [:index, :show, :create, :destroy]
   before_action :correct_user,   only: :destroy
   
+  def index
+    @guesthouses = Guesthouse.all
+  end
+
+  def show
+    @guesthouse = Guesthouse.find(params[:id])
+  end
+
   def create
     @guesthouse = current_user.guesthouses.build(guesthouse_params)
     if @guesthouse.save

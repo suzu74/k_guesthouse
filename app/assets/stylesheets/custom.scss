@@ -202,10 +202,8 @@ input {
 }
 
 .top 
-{ background: url(room.jpg) no-repeat center center fixed;
-	min-height: 100vh; 
-	background-size: cover;
-	opacity: 0.8;
+{ background: url(room.jpg)  center center / cover no-repeat fixed;
+height: 100vh;
 }
 
 /* microposts */
@@ -253,4 +251,10 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+.guest_img {
+width:100%;
+max-width: 100%;
+height: auto;
 }

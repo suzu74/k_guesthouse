@@ -1,0 +1,15 @@
+<% provide(:title, 'All users') %>
+<h1>ゲストハウス一覧</h1>
+
+<div class="row" style="background-color: #fff">
+ <% @guesthouses.each do |guesthouse| %>
+    <div class="col-xs-12 col-sm-4">
+      <% if guesthouse.picture.attached? %>
+        <h3><%= link_to guesthouse.name, guesthouse %></h3>
+        <%= image_tag guesthouse.picture ,class: "guest_img" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+ 
