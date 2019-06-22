@@ -2,13 +2,13 @@
 <h1><%= @guesthouse.name %></h1>
 <div class="row">
 <aside class="col-md-4">
-<p class="center">
+<p class="">
   <%= image_tag @guesthouse.picture.variant(resize: "350x300") if @guesthouse.picture.attached? %>
 </p>
 </aside>
 <div class="col-md-8">
   <h2 style="font-size: 30px;">ゲストハウスについて</h2>
-  <h3 class="center"><%= @guesthouse.content %></h3>
+  <p class="text-center"><%= @guesthouse.content %></p>
 </div>
 </div>
 
