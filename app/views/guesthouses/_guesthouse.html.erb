@@ -1,0 +1,15 @@
+<li id="micropost-<%= guesthouse.id %>">
+  <span class="user"><%= link_to guesthouse.user.name, guesthouse.user %></span>
+  <span class="content">
+    <%= link_to guesthouse.name, guesthouse %>
+    <%= image_tag guesthouse.picture if guesthouse.picture.attached? %>
+    <%= guesthouse.content %>
+  </span>
+  <span class="timestamp">
+    Posted <%= guesthouse.created_at %>.
+  <% if current_user == guesthouse.user %>
+    <%= link_to "delete", guesthouse, method: :delete,
+                                     data: { confirm: "You sure?" } %>
+  <% end %>
+  </span>
+</li>

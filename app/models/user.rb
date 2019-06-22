@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_one_attached :image
+  has_many :guesthouses, dependent: :destroy
   attr_accessor :remember_token
 
   validates :name, presence: true, length: { maximum: 50 }
@@ -33,4 +34,9 @@ class User < ApplicationRecord
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+  def feed
+    Guesthouse.where("user_id = ?", id)
+  end
+
 end

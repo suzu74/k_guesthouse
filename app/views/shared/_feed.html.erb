@@ -1,0 +1,7 @@
+<% if @guesthouses.any? %>
+  <ol class="microposts">
+    <%= render @guesthouses %>
+  </ol>
+  <%= paginate @guesthouses %>
+  <%= page_entries_info @guesthouses %>
+<% end %>

@@ -9,4 +9,13 @@
         <%= @user.comment %>
     </section>
   </aside>
+  <div class="col-md-8">
+    <% if @user.guesthouses.any? %>
+      <h3>Guesthouses (<%= @user.guesthouses.count %>)</h3>
+      <ol class="microposts">
+        <%= render @guesthouses %>
+      </ol>
+      <%= paginate @guesthouses %>
+    <% end %>
+  </div>
 </div>
