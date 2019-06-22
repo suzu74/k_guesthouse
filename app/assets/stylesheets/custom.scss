@@ -62,6 +62,7 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
+  margin-left: 20px;
   font-size: 1.7em;
   color: #fff;
   text-transform: uppercase;
@@ -201,9 +202,13 @@ input {
 	border-radius: 50%;
 }
 
-.top 
-{ background: url(room.jpg)  center center / cover no-repeat fixed;
-height: 100vh;
+.top
+{ 
+  background: url(room.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /* microposts */
@@ -258,3 +263,11 @@ width:100%;
 max-width: 100%;
 height: auto;
 }
+
+.center {
+  margin: 150px 0 30px 0;
+  h1, h2{
+    color: #fff;
+  }
+}
+

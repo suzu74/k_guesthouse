@@ -1,7 +1,7 @@
 <% provide(:title, 'All users') %>
 <h1>ゲストハウス一覧</h1>
 
-<div class="row" style="background-color: #fff">
+<div class="row" style="background-color: #fff; padding-bottom: 50px;">
  <% @guesthouses.each do |guesthouse| %>
     <div class="col-xs-12 col-sm-4">
       <% if guesthouse.picture.attached? %>
