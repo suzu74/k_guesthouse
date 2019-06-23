@@ -57,6 +57,10 @@ p {
   line-height: 1.7em;
 }
 
+li {
+  list-style: none;
+}
+
 /* header */
 
 #logo {
@@ -211,7 +215,7 @@ input {
   background-size: cover;
 }
 
-/* microposts */
+/* guesthouse */
 
 .microposts {
   list-style: none;
@@ -270,4 +274,14 @@ height: auto;
     color: #fff;
   }
 }
+
+/* guesthouse */
+
+.about  {
+  opacity: 0.8;
+  color: white;
+  background: #c0c0c0;
+  padding: 10px;
+}
+
 

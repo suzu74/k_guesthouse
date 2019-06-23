@@ -1,6 +1,6 @@
 <%= form_for(@guesthouse) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
+  <div class="field" >
   	<%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
     <%= f.text_area :content, placeholder: "ゲストハウスについて簡単にコメントを記入してください" %>

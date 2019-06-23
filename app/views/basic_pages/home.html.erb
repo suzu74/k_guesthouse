@@ -1,6 +1,6 @@
 <% if logged_in? %>
   <div class="row">
-    <aside class="col-md-4">
+    <aside class="col-md-4" style="background-color: #c0c0c0; opacity: 0.9;>
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
@@ -8,8 +8,8 @@
         <%= render 'shared/guesthouse_form' %>
       </section>
     </aside>
-    <div class="col-md-8" style="background-color: white; opacity: 0.9; ">
-      <h3>Guesthouse</h3>
+    <div class="col-md-8" style="background-color: #fff; opacity: 0.9;">
+      <h3 class="text-center">Guesthouse</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>

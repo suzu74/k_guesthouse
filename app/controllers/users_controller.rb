@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @guesthouses = @user.guesthouses.page(params[:page])
+    @guesthouse = Guesthouse.new
   end
 
   def new
@@ -20,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "登録が完了しました！"
       redirect_to @user
     else
       render 'new'

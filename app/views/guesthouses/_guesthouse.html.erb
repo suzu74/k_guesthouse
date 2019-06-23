@@ -1,14 +1,18 @@
 <li id="micropost-<%= guesthouse.id %>">
-  <span class="content">
+  <p class="text-center">
     <%= link_to guesthouse.name, guesthouse %>
+  </p>
+  <p class="text-center">
     <%= image_tag guesthouse.picture.variant(resize: "350x300") if guesthouse.picture.attached? %>
+  </p>
+  <p class="text-center">
     <%= guesthouse.content %>
-  </span>
-  <span class="timestamp">
-    Posted <%= guesthouse.created_at %>.
+  </p>
+  <p class="text-center timestamp">
+    投稿日 <%= guesthouse.created_at %>.
   <% if current_user == guesthouse.user %>
     <%= link_to "delete", guesthouse, method: :delete,
                                      data: { confirm: "You sure?" } %>
   <% end %>
-  </span>
+  </p>
 </li>
