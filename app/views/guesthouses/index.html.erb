@@ -1,15 +1,18 @@
 <% provide(:title, 'All users') %>
 <h1>ゲストハウス一覧</h1>
 
-<div class="row" style="background-color: #fff; padding-bottom: 50px;">
- <% @guesthouses.each do |guesthouse| %>
-    <div class="col-xs-12 col-sm-4">
-      <% if guesthouse.picture.attached? %>
+<div class="container text-center guesthouses">
+  <div class="row">
+   <% @guesthouses.each do |guesthouse| %>
+      <div class="col-xs-12 col-sm-4">
         <h3><%= link_to guesthouse.name, guesthouse %></h3>
-        <%= image_tag guesthouse.picture ,class: "guest_img" %>
-      <% end %>
-    </div>
-  <% end %>
+        <% if guesthouse.picture.attached? %>
+          <%= image_tag guesthouse.picture ,class: "guest_img" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <%= paginate @guesthouses %>
+  <%= page_entries_info @guesthouses %>
 </div>
-
  

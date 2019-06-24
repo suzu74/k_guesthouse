@@ -3,7 +3,7 @@ class GuesthousesController < ApplicationController
   before_action :correct_user,   only: :destroy
   
   def index
-    @guesthouses = Guesthouse.all
+    @guesthouses = Guesthouse.all.page(params[:page]).per(6)
   end
 
   def show
@@ -16,8 +16,9 @@ class GuesthousesController < ApplicationController
       flash[:success] = "投稿されました!"
       redirect_to root_url
     else
-      @feed_items = []
-      render 'basic_pages/home'
+      @guesthouses = Guesthouse.all
+      flash[:warning] = "必要な箇所が入力されていません"
+      redirect_to root_path
     end
   end
 

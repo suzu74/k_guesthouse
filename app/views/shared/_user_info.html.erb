@@ -1,4 +1,5 @@
-<%= image_tag current_user.image.variant(resize: "150x150") if current_user.image.attached? %>
+<p class="text-center profile-pic">
+  <%= image_tag current_user.image.variant(resize: "150x150") if current_user.image.attached? %>
+</p>
 <h1><%= current_user.name %></h1>
-<span><%= link_to "view my profile", current_user %></span>
-<span><%= pluralize(current_user.guesthouses.count, "Guesthouseを紹介") %></span>
+<p class="text-center"><%= link_to "view my profile", current_user %></br><%= pluralize(current_user.guesthouses.count, "Guesthouseを紹介") %></p>

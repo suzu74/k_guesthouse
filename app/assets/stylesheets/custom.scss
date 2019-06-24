@@ -8,8 +8,6 @@
 
 /* universal */
 
-
-
 body {
   padding-top: 60px;
 }
@@ -31,6 +29,11 @@ textarea {
 }
 
 /* typography */
+
+h1 {
+  color: #fff;
+  font-weight: bold;
+}
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -116,6 +119,9 @@ footer ul li {
 aside {
   section.user_info {
     margin-top: 20px;
+    p {
+      padding-top: 20px;
+    }
   }
   section {
     padding: 10px 0;
@@ -206,6 +212,10 @@ input {
 	border-radius: 50%;
 }
 
+.profile-pic {
+  padding-top: 25px;
+}
+
 .top
 { 
   background: url(room.jpg);
@@ -284,4 +294,18 @@ height: auto;
   padding: 10px;
 }
 
+.detail-guesthouse {
+  padding: 20px;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+/* edit, .users, .signup, .login */
+
+.edit, .users, .signup, .login, .guesthouses {
+  background-color: #D3D3D3;
+  opacity: 0.9;
+  padding: 20px;
+  margin: 0  auto;
+}
 

@@ -1,28 +1,29 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4" style="background-color: #c0c0c0"; opacity: 0.9;>
+<div class="row text-center">
+  <aside class="col-md-4" style="background-color: #c0c0c0; opacity: 0.9;"">
     <section class="user_info">
-      <p>
+      <p class="text-center">
         <%= image_tag @user.image.variant(resize: "150x150") if @user.image.attached? %>
       </p>
         <%= @user.name %>
         <%= @user.comment %>
 
     </section>
+    <% if current_user == @user %>
     <section class="micropost_form">
         <%= render 'shared/guesthouse_form' %>
       </section>
+    <% end %>
   </aside>
-  <div class="col-md-8" style="background-color: #fff";>
-    
+  <div class="col-md-8" style="background-color: #fff; opacity: 0.9;">
     <% if @user.guesthouses.any? %>
-      <h3 class="text-center">紹介したGuesthouses (<%= @user.guesthouses.count %>)</h3>
+      <h3 class="text-center"><%= @user.name %>さんが紹介したGuesthouses (<%= @user.guesthouses.count %>)</h3>
       <ol class="microposts">
         <%= render @guesthouses %>
       </ol>
       <%= paginate @guesthouses %>
     <% else %>
-      <h3 class="text-center">まだゲストハウスを投稿していません</h3>
+      <h3 class="text-center" style="padding-bottom: 7px;">まだゲストハウスを投稿していません</h3>
     <% end %>
   </div>
 </div>
