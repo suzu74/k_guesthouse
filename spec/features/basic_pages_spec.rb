@@ -14,9 +14,10 @@ RSpec.feature 'BasicPages', type: :feature do
     expect(page).to have_link 'Home', href: root_path
   end
 
-  scenario 'topページからsignupページへ行ける' do
+  scenario 'topページから登録ページへ行ける' do
     visit root_path
-    click_on "Sign up now"
+    click_on "早速登録する！"
     expect(current_path).to eq signup_path
+    expect(page).to have_content "Email"
   end
 end

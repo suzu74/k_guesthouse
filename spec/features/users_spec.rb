@@ -11,7 +11,7 @@ RSpec.feature 'Users', type: :feature do
     fill_in 'Password',     with: 'password'
     fill_in 'Confirmation', with: 'password'
     click_button 'Create my account'
-    expect(page).to have_content 'Welcome to the Sample App!'
+    expect(page).to have_content '登録が完了しました！'
   end
 
   scenario 'ログイン成功' do
