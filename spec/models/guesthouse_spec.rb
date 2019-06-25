@@ -16,5 +16,16 @@ RSpec.feature 'Guesthouses', type: :feature do
     expect(page).to have_content 'テストユーザー'
   end
 
+  scenario '検索フォームが正常に動作する' do
+    visit login_path
+    fill_in 'Email', with: 'text1@example.com'
+    fill_in 'Password',     with: 'password'
+    click_button 'Log in'
+    click_on 'Home'
+    fill_in '名前で検索', with: 'ゲストハウス'
+    click_on '検索'
+    expect(page).to have_content 'ゲストハウスA'
+  end
+
 
 end

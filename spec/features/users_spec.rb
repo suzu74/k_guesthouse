@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature 'Users', type: :feature do
 
   let!(:user_a) { create(:user) }
-
+  
   scenario 'ユーザー登録に成功' do
     visit signup_path
     fill_in 'Name',         with: 'abc'
@@ -21,5 +21,4 @@ RSpec.feature 'Users', type: :feature do
     click_button 'Log in'
     expect(page).to have_content 'ログインに成功しました！'
   end
-
 end
