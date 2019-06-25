@@ -10,6 +10,15 @@
     </aside>
     <div class="col-md-8" style="background-color: #fff; opacity: 0.9;">
       <h3 class="text-center">投稿されたGuesthouse</h3>
+      <%= search_form_for(@q, url: root_path) do |f| %>
+        <div class="form-group">
+          <%= f.label :name_cont, "名前で検索" %>
+          <%= f.search_field :name_cont, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit class: 'btn btn-outline-primary' %>
+        </div>
+      <% end %>
       <%= render 'shared/feed' %>
     </div>
   </div>
