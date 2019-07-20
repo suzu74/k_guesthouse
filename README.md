@@ -1,24 +1,8 @@
-# README
+# 好きなゲストハウスを共有するサービス
+自分が泊まったことのある、おすすめの韓国のゲストハウスを紹介するサイトです。
+URL: https://k-guesthouse.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Railsを用いてWebアプリケーションを作成しました。  
+Kaminariやransackなどのgem、Active strageを用いた画像投稿機能の実装を行いました。  
+また、テストではRSpecを用いて開発致しました。  
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
