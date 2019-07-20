@@ -1,0 +1,18 @@
+<% provide(:title, @guesthouse.name) %>
+<h1><%= @guesthouse.name %></h1>
+<div class="row detail-guesthouse">
+  <aside class="col-md-4">
+  <p>
+    <%= image_tag @guesthouse.picture.variant(resize: "300x250") if @guesthouse.picture.attached? %>
+  </p>
+  </aside>
+  <div class="col-md-8">
+    <h2 style="font-size: 30px;">ゲストハウスについて</h2>
+    <p class="text-center"><%= @guesthouse.content %></p>
+    <p class="text-center">紹介してくれた人<br><%= @guesthouse.user.name %></p>
+  </div>
+</div>
+
+
+
+    

@@ -6,7 +6,11 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 gem 'bootstrap-sass', '3.3.7'
-
+gem 'jquery-rails'
+gem 'kaminari'
+gem "aws-sdk-s3", require: false
+gem 'ransack'
+gem 'rails-i18n'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '1.3.13', group: :development
 # Use Puma as the app server
@@ -30,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -51,6 +55,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'bullet'
 end
 
 group :production do

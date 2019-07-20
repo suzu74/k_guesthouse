@@ -1,11 +1,33 @@
-<div class="center jumbotron">
+<% if logged_in? %>
+  <div class="row text-center">
+    <aside class="col-md-4" style="background-color: #c0c0c0; opacity: 0.9;>
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/guesthouse_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8" style="background-color: #fff; opacity: 0.9;">
+      <h3 class="text-center">投稿されたGuesthouse</h3>
+      <%= search_form_for(@q, url: root_path) do |f| %>
+        <div class="form-group">
+          <%= f.label :name_cont, "名前で検索" %>
+          <%= f.search_field :name_cont, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.submit class: 'btn btn-outline-primary' %>
+        </div>
+      <% end %>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
+<div class="center">
   <h1>Welcome to the K-Guesthouse</h1>
-
-  <h2>
-    This is the home page for the
-    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <h2>おすすめの韓国ゲストハウスを共有しよう！</h2>
+  <%= link_to "早速登録する！", signup_path, class: "btn btn-lg btn-primary" %>
 </div>
+
+<% end %>

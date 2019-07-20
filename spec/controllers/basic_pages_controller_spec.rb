@@ -10,7 +10,6 @@ describe BasicPagesController, type: :controller do
 
     it 'アバウトページへのレスポンスの成功' do
       get :about
-      # expect(title).to have_title "About | K-Guesthouse"
       expect(response).to be_successful
     end
   end
